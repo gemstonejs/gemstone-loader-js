@@ -57,7 +57,7 @@ module.exports = function (content, inputSourceMap) {
     const options = Object.assign({}, {
         scope: "none"
     }, loaderUtils.getOptions(this), this.resourceQuery ? loaderUtils.parseQuery(this.resourceQuery) : null)
-    void(options)
+    void (options)
 
     /*  indicate to Webpack that our results are
         fully deterministic and can be cached  */

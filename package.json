@@ -1,8 +1,8 @@
 {
     "name":        "gemstone-loader-js",
     "homepage":    "http://github.com/gemstonejs/gemstone-loader-js",
-    "description": "Webpack loader for JavaScript files in Gemstone Technology Stack",
-    "version":     "0.0.0",
+    "description": "Webpack Loader for JavaScript files in Gemstone JavaScript Technology Stack",
+    "version":     "0.9.0",
     "license":     "Apache-2.0",
     "author": {
         "name":    "Gemstone Project",
@@ -20,6 +20,11 @@
     },
     "devDependencies": {
         "eslint":                         "~3.19.0",
+        "eslint-config-standard":         "~10.0.0",
+        "eslint-plugin-standard":         "~2.2.0",
+        "eslint-plugin-promise":          "~3.5.0",
+        "eslint-plugin-import":           "~2.2.0",
+        "eslint-plugin-node":             "~4.2.2",
         "babel-eslint":                   "~7.2.1"
     },
     "dependencies" : {
@@ -34,10 +39,10 @@
         "babel-plugin-transform-runtime": "~6.23.0"
     },
     "engines": {
-        "node":                           ">=6.7.0"
+        "node":                           ">=6.0.0"
     },
     "scripts": {
-        "prepublish": "eslint --config eslint.json gemstone-loader-js.js"
+        "prepublish": "eslint --config eslint.yaml gemstone-loader-js.js"
     },
     "main": "./gemstone-loader-js.js"
 }
