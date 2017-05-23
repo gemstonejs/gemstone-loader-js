@@ -35,7 +35,7 @@
         "babel-preset-es2017":            "~6.24.1",
         "babel-preset-stage-3":           "~6.24.1",
         "babel-preset-stage-2":           "~6.24.1",
-        "babel-preset-babili":            "~0.0.12",
+        "babel-preset-babili":            "~0.1.2",
         "babel-plugin-transform-runtime": "~6.23.0"
     },
     "engines": {
