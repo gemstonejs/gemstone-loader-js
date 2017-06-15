@@ -85,8 +85,10 @@ module.exports = function (content, inputSourceMap) {
             require.resolve("babel-plugin-transform-runtime")
         ]
     }
+    /*  FIXME: currently buggy!?
     if (this.minimize)
         opts.presets.push(require.resolve("babel-preset-babili"))
+    */
     let result = transpile(content, opts)
 
     /*  provide results to Webpack  */
