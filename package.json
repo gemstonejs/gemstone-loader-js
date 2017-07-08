@@ -42,7 +42,7 @@
         "node":                           ">=6.0.0"
     },
     "scripts": {
-        "prepublish": "eslint --config eslint.yaml gemstone-loader-js.js"
+        "prepublishOnly": "eslint --config eslint.yaml gemstone-loader-js.js"
     },
     "main": "./gemstone-loader-js.js"
 }
