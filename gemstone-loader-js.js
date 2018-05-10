@@ -75,20 +75,16 @@ module.exports = function (content, inputSourceMap) {
         sourceFileName: path.relative(process.cwd(), filename),
         filename:       filename,
         presets: [
-            require.resolve("babel-preset-es2015"),
-            require.resolve("babel-preset-es2016"),
-            require.resolve("babel-preset-es2017"),
-            require.resolve("babel-preset-stage-3"),
-            require.resolve("babel-preset-stage-2")
+            [ require.resolve("babel-preset-env"), { targets: [ "last 2 versions" ] } ],
+            require.resolve("babel-preset-stage-2"),
+            require.resolve("babel-preset-stage-3")
         ],
         plugins: [
             require.resolve("babel-plugin-transform-runtime")
         ]
     }
-    /*  FIXME: currently buggy!?
     if (this.minimize)
-        opts.presets.push(require.resolve("babel-preset-babili"))
-    */
+        opts.presets.push(require.resolve("babel-preset-minify"))
     let result = transpile(content, opts)
 
     /*  provide results to Webpack  */
