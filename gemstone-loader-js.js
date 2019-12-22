@@ -64,11 +64,11 @@ module.exports = function (content, inputSourceMap) {
     this.cacheable(true)
 
     /*  determine filenames  */
-    let filenameChain = loaderUtils.getRemainingRequest(this).split("!")
-    let filename = filenameChain[filenameChain.length - 1]
+    const filenameChain = loaderUtils.getRemainingRequest(this).split("!")
+    const filename = filenameChain[filenameChain.length - 1]
 
     /*  transpile content  */
-    let opts = {
+    const opts = {
         sourceMap:      this.sourceMap,
         inputSourceMap: inputSourceMap,
         sourceRoot:     process.cwd(),
@@ -85,7 +85,7 @@ module.exports = function (content, inputSourceMap) {
     }
     if (this.minimize)
         opts.presets.push(require.resolve("babel-preset-minify"))
-    let result = transpile(content, opts)
+    const result = transpile(content, opts)
 
     /*  provide results to Webpack  */
     this.callback(null, result.code, result.map)
